@@ -1,0 +1,39 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: application-py
+  labels:
+    app: app-py
+    name: application-py
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: app-py
+      name: application-py
+  template:
+    metadata:
+      name: application-py
+      labels:
+        app: app-py
+        name: application-py
+    spec:
+      containers:
+      - name: application-py
+        image: gcr.io/gcp-final-338018/gcp-new
+        ports:
+          - containerPort: 8000
+        imagePullPolicy: Always
+        env:
+          - name: ENVIRONMENT
+            value: "DEV"
+          - name: HOST
+            value: "localhost"
+          - name: PORT
+            value: "8000"
+          - name: REDIS_HOST
+            value: "capcom"
+          - name: REDIS_PORT
+            value: "6379"
+          - name: REDIS_DB
+            value: "0"
