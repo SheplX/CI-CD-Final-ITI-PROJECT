@@ -6,7 +6,7 @@ pipeline {
        script {
         withCredentials([file(credentialsId: 'cluster_id', variable: 'KUBECONFIG')]) {
           sh """
-              gcloud container clusters get-credentials my-gke-cluster --region europe-west2 --project lustrous-maxim-341315
+              gcloud container clusters get-credentials gp-cluster --region europe-west1 --project iti-project-340821
           """
         }
       }
