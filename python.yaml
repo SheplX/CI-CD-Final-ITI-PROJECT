@@ -20,7 +20,7 @@ spec:
     spec:
       containers:
       - name: application-py
-        image: gcr.io/gcp-final-338018/gcp-new
+        image: shepl/python_app
         ports:
           - containerPort: 8000
         imagePullPolicy: Always
