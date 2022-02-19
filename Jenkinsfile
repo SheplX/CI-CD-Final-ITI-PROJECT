@@ -1,14 +1,12 @@
 pipeline {
   agent { label 'slave' }
   stages {
-    stage('start') {
+        stage('Deploy') {
       steps {
-        script {
-        withCredentials([usernamePassword(credentialsId: 'dockerhub_id', usernameVariable: 'USERNAME', passwordVariable: 'PASSWORD')]) {
+       script {
+        withCredentials([file(credentialsId: 'cluster_id', variable: 'KUBECONFIG')]) {
           sh """
-              docker login -u ${env.USERNAME} -p ${env.PASSWORD}
-              docker build -t shepl/app:latest .
-              docker push shepl/app:latest
+              gcloud container clusters get-credentials my-gke-cluster --region europe-west2 --project lustrous-maxim-341315
           """
         }
       }
