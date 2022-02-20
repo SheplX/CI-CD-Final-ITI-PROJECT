@@ -31,14 +31,7 @@ terraform init
 terraform plan
 terraform apply
 ```
-- Navigate to GCP, check instances, ssh into jenkins one then install Ansible:
-```
-sudo apt update
-sudo apt install software-properties-common
-sudo add-apt-repository --yes --update ppa:ansible/ansible
-sudo apt install ansible
-```
-- Make sure that u are at home directory, Apply Ansible PlayBook For setting jenkins and its agent:
+-Check instances > Jenkins one, make sure that u are at home directory, Apply Ansible PlayBook For setting jenkins and its agent:
 ```
 ansible-playbook Ansible.yaml
 ```
