@@ -31,7 +31,7 @@ terraform init
 terraform plan
 terraform apply
 ```
-- Check instances > Jenkins, ssh into it, make sure that u are at home directory, Apply Ansible PlayBook For setting jenkins and its agent:
+- Check instances > Jenkins, ssh into it, make sure that u are at home directory, Apply Ansible PlayBook For deploying jenkins and its agent:
 ```
 ansible-playbook Ansible.yaml
 ```
