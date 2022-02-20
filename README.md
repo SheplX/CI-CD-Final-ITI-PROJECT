@@ -1,4 +1,4 @@
-![Image](https://github.com/SheplX/CI-CD-Final-ITI-Task/blob/main/ScreenShots/Simple%20DevOps%20Project%20-%20CI_CD%20with%20Git%2C%20Jenkins%2C%20Ansible%2C%20Docker%20and%20Kubernetes%20_%20Simpliv.png)
+![Image](https://github.com/SheplX/CI-CD-Final-ITI-PROJECT/blob/main/ScreenShots/Simple%20DevOps%20Project%20-%20CI_CD%20with%20Git%2C%20Jenkins%2C%20Ansible%2C%20Docker%20and%20Kubernetes%20_%20Simpliv.png)
 
 # CI/CD FULL PIPELINE STEP :
 
@@ -23,9 +23,9 @@ Well, we used here Google Cloud Provider so u need :
 
 - Download the source code :
 ```
-git clone https://github.com/SheplX/CI-CD-Final-ITI-Task.git
+git clone https://github.com/SheplX/CI-CD-Final-ITI-PROJECT.git
 ```
-- Navigate to [Terraform](https://github.com/SheplX/CI-CD-Final-ITI-Task/tree/main/Terraform) folder run the following commands:
+- Navigate to [Terraform](https://github.com/SheplX/CI-CD-Final-ITI-PROJECT/tree/main/Terraform) folder run the following commands:
 ```
 terraform init
 terraform plan
@@ -44,6 +44,6 @@ kubectl get all
 # FINALLY :
 
 - Thanks for checking my content, any questions ? u can find me [Here](https://www.facebook.com/shepl.dev/)
-- During our steps, we loved to share some captures about every step info, u can check them [Here](https://github.com/SheplX/CI-CD-Final-ITI-Task/tree/main/ScreenShots)
+- During our steps, we loved to share some captures about every step info, u can check them [Here](https://github.com/SheplX/CI-CD-Final-ITI-PROJECT/tree/main/ScreenShots)
 
-![Image](https://github.com/SheplX/CI-CD-Final-ITI-Task/blob/main/ScreenShots/Screenshot%20from%202022-02-20%2005-09-19.png)
+![Image](https://github.com/SheplX/CI-CD-Final-ITI-PROJECT/blob/main/ScreenShots/Screenshot%20from%202022-02-20%2005-09-19.png)
