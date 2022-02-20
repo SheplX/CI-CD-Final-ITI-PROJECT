@@ -9,7 +9,7 @@
 
 # SOME INFO ABOUT THE INFRASTRUCTURE BUILD : 
 
-- Cuz the secruity is always our goal, we built all this infrastructure privatly, so our application can run under a good layers of the security.
+- Cuz the secruity is always our goal, we built all this infrastructure privately, so our application can run under a good layers of the security.
 - The used infrastructure here is a private vpc & subnet & instance & GKE cluster.
 - We also made all the pipeline steps running on the instance and used it as a Jenkins agent.
 
