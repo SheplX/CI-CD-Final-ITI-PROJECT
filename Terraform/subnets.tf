@@ -96,6 +96,12 @@ resource "google_compute_instance" "jenkins" {
     sudo apt-get install docker-ce -y;
     sudo systemctl start docker;
     sudo systemctl enable docker;
+    
+    #to install java 11
+    sudo add-apt-repository ppa:openjdk-r/ppa;
+    sudo apt-get update;
+    sudo apt install openjdk-11-jdk;
+ 
     SCRIPT
  
 }
