@@ -5,7 +5,7 @@
 - Welcome there from ITI Students !
 - Today we would like to share a full pipeline process starts from terraform infrastructure step till application deployment as a final step.
 - In this long process, we used a different DevOps tools like :
- `Terraform - Ansible - GCP - Git - Jenkins - Kubernetes - Docker`
+- `Terraform - Ansible - GCP - Git - Jenkins - Kubernetes - Docker`
 
 # SOME INFO ABOUT THE INFRASTRUCTURE BUILD : 
 
