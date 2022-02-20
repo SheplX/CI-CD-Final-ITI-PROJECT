@@ -50,7 +50,7 @@ kubectl get all
 
 # FINALY
 
-- Thanks for checking my content, any quesions ? u can find me [Here](https://www.facebook.com/shepl.dev/)
+- Thanks for checking my content, any questions ? u can find me [Here](https://www.facebook.com/shepl.dev/)
 - During our steps, we loved to share some captures about every step info, u can check them [Here](https://github.com/SheplX/CI-CD-Final-ITI-Task/tree/main/ScreenShots)
 
 ![Image](https://github.com/SheplX/CI-CD-Final-ITI-Task/blob/main/ScreenShots/Screenshot%20from%202022-02-20%2005-09-19.png)
