@@ -62,7 +62,7 @@ resource "google_compute_instance" "jenkins" {
     scopes = ["cloud-platform"]
   }
  
- metadata_startup_script = <<SCRIPT
+metadata_startup_script = <<SCRIPT
  
     #to install kubectl CLI
     curl -LO "https://dl.k8s.io/release/$(curl -L -s https://dl.k8s.io/release/stable.txt)/bin/linux/amd64/kubectl";
