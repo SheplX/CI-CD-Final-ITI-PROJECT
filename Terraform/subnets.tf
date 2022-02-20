@@ -61,4 +61,40 @@ resource "google_compute_instance" "jenkins" {
     email  = google_service_account.private-vm-sa.email
     scopes = ["cloud-platform"]
   }
+ metadata_startup_script = <<SCRIPT
+ 
+    #to install kubectl CLI
+    curl -LO "https://dl.k8s.io/release/$(curl -L -s https://dl.k8s.io/release/stable.txt)/bin/linux/amd64/kubectl";
+    curl -LO "https://dl.k8s.io/$(curl -L -s https://dl.k8s.io/release/stable.txt)/bin/linux/amd64/kubectl.sha256";
+    sudo install -o root -g root -m 0755 kubectl /usr/local/bin/kubectl;
+
+    #to get latest updated repos
+    sudo apt-get update;
+    
+    #to install Ansible
+    sudo apt-get install -y ansible;
+
+    #to get latest updated repos
+    sudo apt-get update;
+
+    #to install pip3
+    sudo apt -y install python3-pip;
+    
+    #to install required modules
+    sudo pip install openshift pyyaml kubernetes;
+
+    #to fix Ansible playbook errors
+    sudo pip install -Iv kubernetes==11.0;
+    
+    #to install docker
+    sudo apt update;
+    sudo apt-get install apt-transport-https ca-certificates curl software-properties-common -y;
+    curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -;
+    sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu  $(lsb_release -cs)  stable";
+    sudo apt update;
+    sudo apt-get install docker-ce -y;
+    sudo systemctl start docker;
+    sudo systemctl enable docker;
+    SCRIPT
+ 
 }
