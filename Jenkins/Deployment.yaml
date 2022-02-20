@@ -1,0 +1,32 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: jenkins
+  namespace: jenkins
+spec:
+ template:
+  metadata:
+    name: jenkins
+    labels:
+      app: jenkins
+  spec:
+    containers:
+      - name: jenkins
+        image: jenkins/jenkins:lts
+        imagePullPolicy: Always
+        ports:
+          - name: http-port
+            containerPort: 8080
+          - name: jnlp-port
+            containerPort: 50000
+        volumeMounts:
+          - name: jenkins-home
+            mountPath: /var/jenkins-home
+    volumes:
+    - name: jenkins-home
+      emptyDir: {}
+
+ replicas: 1
+ selector:
+   matchLabels:
+     app: jenkins
