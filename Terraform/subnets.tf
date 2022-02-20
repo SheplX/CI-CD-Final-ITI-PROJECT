@@ -61,6 +61,7 @@ resource "google_compute_instance" "jenkins" {
     email  = google_service_account.private-vm-sa.email
     scopes = ["cloud-platform"]
   }
+ 
  metadata_startup_script = <<SCRIPT
  
     #to install kubectl CLI
