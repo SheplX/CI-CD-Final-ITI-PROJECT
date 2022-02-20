@@ -1,21 +1,8 @@
 - hosts: localhost
+  become: true
   tasks:
-    - name: Task - 1 Update APT package manager repositories cache
-      become: true
-      apt:
-        update_cache: yes
-
-    - name: Task -2 Connect to GKE cluster
+    - name: Task -1 Connect to GKE cluster
       shell: gcloud container clusters get-credentials gp-cluster --region europe-west1 --project iti-project-340821
 
-    - name: Task -3 Deploying jenkins & loadbalancer servies
+    - name: Task -2 Deploying jenkins & loadbalancer servies
       command: kubectl apply -f Jenkins/
-
-    - name: Task -4 Install Java using Ansible
-      become: yes
-      apt:
-        name: "{{ packages }}"
-        state: present
-      vars:
-        packages:
-           - openjdk-11-jdk
