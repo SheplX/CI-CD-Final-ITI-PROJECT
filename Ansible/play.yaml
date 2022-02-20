@@ -1,0 +1,58 @@
+- hosts: localhost
+  tasks:
+    - name: Task - 1 Update APT package manager repositories cache
+      become: true
+      apt:
+        update_cache: yes
+  
+    - name: Task -2 Install Java using Ansible
+      become: yes
+      apt:
+        name: "{{ packages }}"
+        state: present
+      vars:
+        packages:
+           - openjdk-11-jdk
+
+    - name: Task -3 Ensure that docker repository key is installed
+      become: true
+      apt_key:
+        url: https://download.docker.com/linux/ubuntu/gpg
+        state: present
+
+    - name: Task -4 Ensure docker registry is available
+      become: true
+      apt_repository: repo='deb https://download.docker.com/linux/ubuntu bionic stable' state=present
+
+    - name: Task -5 Ensure docker and dependencies are installed
+      become: true
+      apt: name=docker-ce update_cache=yes
+    # - service: name=docker state=restarted
+
+    - name: Task -6 Connect to GKE cluster
+      shell: gcloud container clusters get-credentials gp-cluster --region europe-west1 --project iti-project-340821
+
+    - name: Task -7 Deploying jenkins & loadbalancer servies
+      command: kubectl apply -f jenkins/
+
+    - name: Task -8 Install APT Transport HTTPS
+      apt:
+        name: apt-transport-https
+        state: present
+
+    - name: Task -9 Add Kubernetes apt-key for APT repository
+      apt_key:
+        url: https://packages.cloud.google.com/apt/doc/apt-key.gpg
+        state: present
+
+    - name: Task -10 Add Kubernetes APT repository
+      apt_repository:
+        repo: deb http://apt.kubernetes.io/ kubernetes-xenial main
+        state: present
+        filename: 'kubernetes'
+
+    - name: Task -11 Install kubectl
+      apt:
+        name: kubectl=1.14.0-00
+        state: present
+        force: yes
