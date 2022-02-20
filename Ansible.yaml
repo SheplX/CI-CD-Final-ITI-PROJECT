@@ -1,8 +1,14 @@
 - hosts: localhost
-  become: true
   tasks:
-    - name: Task -1 Connect to GKE cluster
+    - name: Task -1 Connect to cluster
       shell: gcloud container clusters get-credentials gp-cluster --region europe-west1 --project iti-project-340821
-
-    - name: Task -2 Deploying jenkins & loadbalancer servies
+      
+    - name: Task -2 Create Jenkins namespace
+      kubernetes.core.k8s:
+        name: jenkins
+        api_version: v1
+        kind: Namespace
+        state: present
+            
+    - name: Task -3 Deploying jenkins & loadbalancer servies
       command: kubectl apply -f Jenkins/
