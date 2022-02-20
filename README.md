@@ -16,8 +16,8 @@
 # Requirements :
 
 Well, we used here Google Cloud Provider so u need :
--  An configured gcp account with billing account enabled
--  An configured project 
+-  An configured gcp account with billing account enabled. 
+-  An configured project.
 
 # Installation :
 
