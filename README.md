@@ -1,6 +1,6 @@
 ![Image](https://github.com/SheplX/CI-CD-Final-ITI-Task/blob/main/ScreenShots/Simple%20DevOps%20Project%20-%20CI_CD%20with%20Git%2C%20Jenkins%2C%20Ansible%2C%20Docker%20and%20Kubernetes%20_%20Simpliv.png)
 
-# CI/CD FULL PIPELINE STEP 
+# CI/CD FULL PIPELINE STEP :
 
 - Welcome there from ITI Students !
 - Today we would like to share a full pipeline process starts from terraform infrastructure step till application deployment as a final step.
@@ -41,7 +41,7 @@ kubectl get all
 ```
 - Now u can setting ur pipeline and connect it to this repo for building the application and deploying it.
 
-# FINALY
+# FINALLY :
 
 - Thanks for checking my content, any questions ? u can find me [Here](https://www.facebook.com/shepl.dev/)
 - During our steps, we loved to share some captures about every step info, u can check them [Here](https://github.com/SheplX/CI-CD-Final-ITI-Task/tree/main/ScreenShots)
