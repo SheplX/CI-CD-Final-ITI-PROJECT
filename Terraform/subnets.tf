@@ -42,7 +42,7 @@ resource "google_project_iam_binding" "vm-project" {
   ]
 }
 
-resource "google_compute_instance" "ansible_vm" {
+resource "google_compute_instance" "jenkins" {
   name         = "ansible-vm"
   machine_type = "e2-micro"
   zone         = "europe-west1-b"
