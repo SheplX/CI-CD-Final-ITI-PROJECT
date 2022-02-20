@@ -4,7 +4,7 @@
 
 - Welcome there from ITI Students !
 - Today we would like to share a full pipeline process starts from terraform infrastructure step till application deployment as a final step.
-- In this long process, we used a different DevOps tools like, `Terraform - Ansible - GCP - Git - Jenkins - Kubernetes - Docker`.
+- In this long process, we used a different DevOps tools like, `Terraform - Ansible - GCP - Git - Jenkins - Kubernetes - Docker`
 
 # SOME INFO ABOUT THE INFRASTRUCTURE BUILD : 
 
@@ -24,26 +24,24 @@ Well, we used here Google Cloud Provider so u need :
 ```
 git clone https://github.com/SheplX/CI-CD-Final-ITI-Task.git
 ```
-- Navigate to [Terraform](https://github.com/SheplX/CI-CD-Final-ITI-Task/tree/main/Terraform) folder run the following commands :
+- Navigate to [Terraform](https://github.com/SheplX/CI-CD-Final-ITI-Task/tree/main/Terraform) folder run the following commands:
 ```
 terraform init
 terraform plan
 terraform apply
 ```
-- Navigate to GCP, check instances, ssh into jenkins one.
-
-- Install Ansible :
+- Navigate to GCP, check instances, ssh into jenkins one then install Ansible:
 ```
 sudo apt update
 sudo apt install software-properties-common
 sudo add-apt-repository --yes --update ppa:ansible/ansible
 sudo apt install ansible
 ```
-- Make sure that u are at home directory, Apply Ansible PlayBook For setting jenkins and its agent  :
+- Make sure that u are at home directory, Apply Ansible PlayBook For setting jenkins and its agent:
 ```
 ansible-playbook Ansible.yaml
 ```
-- Check LoadbalancerIP servies and run it on port 8080 for Jenkins UI using this command :
+- Check LoadbalancerIP servies and run it on port 8080 for Jenkins UI using this command:
 ```
 kubectl get all
 ```
