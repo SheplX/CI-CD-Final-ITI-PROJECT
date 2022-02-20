@@ -1,4 +1,4 @@
-![Image](https://github.com/SheplX/CI-CD-Final-ITI-Task/blob/main/ScreenShots/Enterprise%20DevOps_%20The%20Spine%20Is%20Critical%20-%20DZone%20DevOps.png)
+![Image](https://github.com/SheplX/CI-CD-Final-ITI-Task/blob/main/ScreenShots/Simple%20DevOps%20Project%20-%20CI_CD%20with%20Git%2C%20Jenkins%2C%20Ansible%2C%20Docker%20and%20Kubernetes%20_%20Simpliv.png)
 
 # CI/CD FULL PIPELINE STEP 
 
@@ -53,4 +53,4 @@ kubectl get all
 - Thanks for checking my content, any quesions ? u can find me [Here](https://www.facebook.com/shepl.dev/)
 - During our steps, we loved to share some captures about every step info, u can check them [Here](https://github.com/SheplX/CI-CD-Final-ITI-Task/tree/main/ScreenShots)
 
-![Image](https://github.com/SheplX/CI-CD-Final-ITI-Task/blob/main/ScreenShots/Screenshot%20from%202022-02-20%2004-38-18.png)
+![Image](https://github.com/SheplX/CI-CD-Final-ITI-Task/blob/main/ScreenShots/Screenshot%20from%202022-02-20%2005-09-19.png)
