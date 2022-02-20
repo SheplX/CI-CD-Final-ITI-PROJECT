@@ -4,7 +4,8 @@
 
 - Welcome there from ITI Students !
 - Today we would like to share a full pipeline process starts from terraform infrastructure step till application deployment as a final step.
-- In this long process, we used a different DevOps tools like, `Terraform - Ansible - GCP - Git - Jenkins - Kubernetes - Docker`
+- In this long process, we used a different DevOps tools like :
+ `Terraform - Ansible - GCP - Git - Jenkins - Kubernetes - Docker`
 
 # SOME INFO ABOUT THE INFRASTRUCTURE BUILD : 
 
@@ -49,7 +50,7 @@ kubectl get all
 
 # FINALY
 
-- Thanks for checking my content, if u have any question u can contact [Here](https://www.facebook.com/shepl.dev/)
+- Thanks for checking my content, any quesions ? u can find me [Here](https://www.facebook.com/shepl.dev/)
 - During our steps, we loved to share some captures about every step info, u can check them [Here](https://github.com/SheplX/CI-CD-Final-ITI-Task/tree/main/ScreenShots)
 
 ![Image](https://github.com/SheplX/CI-CD-Final-ITI-Task/blob/main/ScreenShots/Screenshot%20from%202022-02-20%2004-38-18.png)
